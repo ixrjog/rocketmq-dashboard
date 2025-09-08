@@ -95,7 +95,7 @@ ldap:
   url: ENC(RD0eY2IYFo88/dtUWnD/4lzdkjt5GNycg20DwwoCaDg=)
   base: ENC(IHfH4J9+VYEsk7EWi0EqM7UWQUIqv153jypt4D5KfLc=)
   manager:
-    dn: ENC(Yrx/6rdVp4RgyRy5XpXEj7Z//sk4FrN5Xd43Jz6dfvo=)
+    dn: ENC(8ElYU20W0m6G8+D5TwMdlM8UrCujDCwZgjI32ql/NyzBHiodoJKZwqyMa5a5Zos/gjO482oj9zqYfo5xpe45IQ==)
     password: ENC(kMQ0edneEuONmBEbHcQTg724fNY6Imp+DH4FhX6fMww=)
   user:
     id: cn
