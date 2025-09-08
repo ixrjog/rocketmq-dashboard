@@ -90,3 +90,29 @@ threadpool:
     maxSize: 10
     keepAliveTime: 3000
     queueSize: 5000
+
+ldap:
+  url: ENC(RD0eY2IYFo88/dtUWnD/4lzdkjt5GNycg20DwwoCaDg=)
+  base: ENC(IHfH4J9+VYEsk7EWi0EqM7UWQUIqv153jypt4D5KfLc=)
+  manager:
+    dn: ENC(Yrx/6rdVp4RgyRy5XpXEj7Z//sk4FrN5Xd43Jz6dfvo=)
+    password: ENC(kMQ0edneEuONmBEbHcQTg724fNY6Imp+DH4FhX6fMww=)
+  user:
+    id: cn
+    dn: ou=People
+    objectClass: inetOrgPerson
+  group:
+    id: cn
+    dn: ou=Groups
+    objectClass: groupOfUniqueNames
+    memberAttribute: uniqueMember
+  roleMapping:
+    superGroups:
+      - rocketmq-admin
+    userGroups:
+      - rocketmq-user
+
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: 'org.jasypt.iv.NoIvGenerator'
