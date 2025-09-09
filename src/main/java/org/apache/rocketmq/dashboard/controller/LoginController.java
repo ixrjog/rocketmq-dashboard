@@ -21,6 +21,7 @@ import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.rocketmq.dashboard.config.RMQConfigure;
+import org.apache.rocketmq.dashboard.ldap.service.LdapService;
 import org.apache.rocketmq.dashboard.model.LoginInfo;
 import org.apache.rocketmq.dashboard.model.LoginResult;
 import org.apache.rocketmq.dashboard.model.User;
@@ -50,6 +51,9 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
+    @Resource
+    private LdapService ldapService;
+
     @Value("${server.servlet.context-path:/}")
     private String contextPath;
 
@@ -70,7 +74,7 @@ public class LoginController {
                         HttpServletRequest request,
                         HttpServletResponse response) throws Exception {
         logger.info("user:{} login", userInfoRequest.getUsername());
-        User user = userService.queryByUsernameAndPassword(userInfoRequest.getUsername(), userInfoRequest.getPassword());
+        User user = ldapService.queryByUsernameAndPassword(userInfoRequest.getUsername(), userInfoRequest.getPassword());
 
         if (user == null) {
             throw new IllegalArgumentException("Bad username or password!");

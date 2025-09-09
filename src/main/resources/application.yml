@@ -32,12 +32,6 @@ server:
 spring:
   application:
     name: rocketmq-dashboard
-  autoconfigure:
-    exclude:
-      - org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration
-      - org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration
-
-
   security:
     user:
       name: rocketmq
@@ -79,7 +73,7 @@ rocketmq:
     msgTrackTopicName:
     ticketKey: ticket
     # must create userInfo file: ${rocketmq.config.dataPath}/users.properties if the login is required
-    loginRequired: false
+    loginRequired: true
     # Authentication mode for RocketMQ Dashboard
     # Available options:
     #   - 'file': Use username/password stored in a file (requires 'auth.file.path')

@@ -2,6 +2,7 @@ package org.apache.rocketmq.dashboard.ldap;
 
 import jakarta.annotation.Resource;
 import org.apache.rocketmq.dashboard.BaseTest;
+import org.apache.rocketmq.dashboard.ldap.config.LdapConfiguration;
 import org.jasypt.encryption.StringEncryptor;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,10 +18,15 @@ public class EncryptorTest extends BaseTest {
     @Resource
     private StringEncryptor stringEncryptor;
 
+    @Resource
+    private LdapConfiguration ldapConfiguration;
+
     @Test
     void encryptTest() {
         String str = stringEncryptor.encrypt("123456");
         System.out.println(str);
+
+        System.out.println(ldapConfiguration);
     }
 
 }
