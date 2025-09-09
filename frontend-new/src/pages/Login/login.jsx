@@ -80,6 +80,16 @@ const Login = () => {
                         </Button>
                     </Form.Item>
                 </Form>
+                <div style={{
+                    textAlign: 'center',
+                    marginTop: 16,
+                    padding: 8,
+                    fontSize: 12,
+                    color: '#666',
+                    borderTop: '1px solid #f0f0f0'
+                }}>
+                    Customization by Baiyi
+                </div>
             </div>
         </>
     );
