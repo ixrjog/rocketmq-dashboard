@@ -41,6 +41,9 @@ public class UserContext {
             case "acl":
                 this.userStrategy = userStrategies.get("aclUserStrategy");
                 break;
+            case "ldap":
+                this.userStrategy = userStrategies.get("ldapUserStrategy");
+                break;
             case "file":
             default:
                 this.userStrategy = userStrategies.get("fileUserStrategy");

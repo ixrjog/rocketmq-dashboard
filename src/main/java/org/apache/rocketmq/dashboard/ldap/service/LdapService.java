@@ -94,7 +94,7 @@ public class LdapService {
         return queryByName(username);
     }
 
-    public boolean verifyLogin(String username, String password) {
+    private boolean verifyLogin(String username, String password) {
         log.info("Verify login content username={}", username);
         AndFilter filter = new AndFilter();
         filter.and(new EqualsFilter(OBJECTCLASS, "person"))
