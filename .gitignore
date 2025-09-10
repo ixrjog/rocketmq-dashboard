@@ -8,4 +8,4 @@
 .vscode
 htmlReport/
 
-deploy.sh
+build.sh
