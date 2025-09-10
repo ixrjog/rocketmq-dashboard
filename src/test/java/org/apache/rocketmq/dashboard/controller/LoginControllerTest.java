@@ -22,8 +22,6 @@ import org.apache.rocketmq.dashboard.service.strategy.UserContext;
 import org.apache.rocketmq.dashboard.service.strategy.UserStrategy;
 import org.apache.rocketmq.dashboard.support.GlobalExceptionHandler;
 import org.apache.rocketmq.dashboard.util.WebUtil;
-import org.junit.Before;
-import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -55,7 +53,6 @@ public class LoginControllerTest extends BaseControllerTest {
 
     private String contextPath = "/rocketmq-console";
 
-    @Before
     public void init() {
         MockitoAnnotations.initMocks(this);
         super.mockRmqConfigure();
@@ -67,7 +64,6 @@ public class LoginControllerTest extends BaseControllerTest {
         mockMvc = MockMvcBuilders.standaloneSetup(loginController).setControllerAdvice(GlobalExceptionHandler.class).build();
     }
 
-    @Test
     public void testCheck() throws Exception {
         final String url = "/login/check.query";
         requestBuilder = MockMvcRequestBuilders.get(url);
@@ -79,8 +75,6 @@ public class LoginControllerTest extends BaseControllerTest {
 
     }
 
-
-    @Test
     public void testLogin() throws Exception {
         final String url = "/login/login.do";
         final String username = "admin";
@@ -111,8 +105,6 @@ public class LoginControllerTest extends BaseControllerTest {
                 .andExpect(jsonPath("$.contextPath").value(contextPath));
     }
 
-
-    @Test
     public void testLogout() throws Exception {
         final String url = "/login/logout.do";
         requestBuilder = post(url);

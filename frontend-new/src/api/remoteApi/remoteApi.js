@@ -16,7 +16,7 @@
  */
 
 const appConfig = {
-    apiBaseUrl: 'http://localhost:8082'
+    apiBaseUrl: window.location.origin
 };
 
 let _redirectHandler = null;
