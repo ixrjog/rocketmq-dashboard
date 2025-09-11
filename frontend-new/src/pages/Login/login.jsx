@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {Button, Form, Input, message, Typography} from 'antd';
 import {remoteApi} from "../../api/remoteApi/remoteApi";
 import {useLanguage} from "../../i18n/LanguageContext";
@@ -25,9 +25,11 @@ const {Title} = Typography;
 const Login = () => {
     const [form] = Form.useForm();
     const [messageApi, msgContextHolder] = message.useMessage();
+    const [loading, setLoading] = useState(false);
     const {t} = useLanguage();
     const onFinish = async (values) => {
         const {username, password} = values;
+        setLoading(true);
         remoteApi.login(username, password).then((res) => {
             if (res.status === 0) {
                 messageApi.success(t.LOGIN_SUCCESS);
@@ -37,6 +39,8 @@ const Login = () => {
             } else {
                 messageApi.error(res.message || t.LOGIN_FAILED);
             }
+        }).finally(() => {
+            setLoading(false);
         })
     };
 
@@ -75,7 +79,7 @@ const Login = () => {
                     </Form.Item>
 
                     <Form.Item>
-                        <Button type="primary" htmlType="submit" block>
+                        <Button type="primary" htmlType="submit" block loading={loading}>
                             {t.LOGIN}
                         </Button>
                     </Form.Item>

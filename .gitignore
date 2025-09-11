@@ -9,3 +9,5 @@
 htmlReport/
 
 build.sh
+
+Dockerfile
