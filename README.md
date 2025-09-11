@@ -1,18 +1,18 @@
 ## 2开重点内容
 
 #### 1. 用户体验优化
-• **登录功能增强**：添加loading状态和按钮禁用功能
-• **前端界面改进**：登录页面添加二次开发标识
-• **API动态化**：使API基础URL跟随浏览器位置动态变化
++ 登录功能增强：添加loading状态和按钮禁用功能
++ 前端界面改进：登录页面添加二次开发标识
++ API动态化：使API基础URL跟随浏览器位置动态变化
 
 #### 2. 认证与安全
-• **LDAP集成**：完整实现LDAP用户认证策略
-• **用户角色管理**：增强用户角色枚举类型
-• **Jasypt加密**：配置加密支持
++ LDAP集成：完整实现LDAP用户认证策略
++ 用户角色管理：增强用户角色枚举类型
++ Jasypt加密：配置加密支持
 
 #### 3. 技术升级与兼容性
-• **JDK 17兼容**：升级Lombok版本解决兼容性问题
-• **代理配置**：解决HTTPS代理重定向问题
++ JDK 17兼容：升级Lombok版本解决兼容性问题
++ 代理配置：解决HTTPS代理重定向问题
 
 ## [Apache RocketMQ](https://github.com/apache/rocketmq) Dashboard 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
