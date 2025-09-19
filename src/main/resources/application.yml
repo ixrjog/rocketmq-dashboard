@@ -22,6 +22,9 @@ server:
       charset: UTF-8
       enabled: true
       force: true
+    session:
+      # 会话超时时间设置为1天
+      timeout: 24h
   # 配置代理头处理，解决 ELB HTTPS 代理后端 HTTP 重定向问题
   forward-headers-strategy: framework
 ## SSL setting
