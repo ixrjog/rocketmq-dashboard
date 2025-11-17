@@ -14,6 +14,10 @@
 + JDK 17兼容：升级Lombok版本解决兼容性问题
 + 代理配置：解决HTTPS代理重定向问题
 
+#### Dashboard URL
++ 配置文件默认端口 8082
++ URL: http://localhost:8082
+
 ## [Apache RocketMQ](https://github.com/apache/rocketmq) Dashboard 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![CodeCov](https://codecov.io/gh/apache/rocketmq-dashboard/branch/master/graph/badge.svg)](https://codecov.io/gh/apache/rocketmq-dashboard)
