@@ -47,6 +47,7 @@ public class SecurityConfig {
                         .csrfTokenRequestHandler(new CsrfTokenRequestAttributeHandler())
                 )
                 .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/static/**", "/*.js", "/*.css", "/*.png", "/*.jpg", "/*.ico").permitAll()
                         .requestMatchers("/actuator/**").hasRole("ADMIN")
                         .anyRequest().permitAll()
                 )
